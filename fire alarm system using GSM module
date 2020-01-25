@@ -25,13 +25,13 @@ void loop()
   if (Flame1== LOW)
   {
     
-      Serial.println("ATD7021850286;"); // ATDxxxxxxxxxx; semicolon should be at the last ;AT command that follows UART protocol;
+      Serial.println("ATDxxxxxxxxxx;"); // ATDxxxxxxxxxx; semicolon should be at the last ;AT command that follows UART protocol;
     digitalWrite(buzzerPin1, HIGH);
     digitalWrite(redled1, HIGH);
     digitalWrite(greenled1, LOW);
        mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
      delay(1000);  // Delay of 1 second
-     mySerial.println("AT+CMGS=\"+917021850286\"\r"); // Replace x with mobile number
+     mySerial.println("AT+CMGS=\"+91xxxxxxxxxx\"\r"); // Replace x with mobile number
      mySerial.println("FIRE IN THE HOUSE");// The SMS text you want to send
      mySerial.println((char)26);// ASCII code of CTRL+Z for saying the end of sms to  the module 
      //delay(100);
